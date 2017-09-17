@@ -63,7 +63,7 @@ class BiuMap extends BiuBase {
         n.posY = n.posY || offsetY
         const firstC = n.children[0]
         const firstCPara = firstC ? firstC.maxH - firstC.rectH : 0
-        let nextY = n.posY + n.rectH / 2 - n.childRectHSum / 2 - firstCPara / 2
+        let nextY = n.posY + n.rectH / 2 - n.maxH / 2
         log(n.title, n.posY, nextY, firstCPara)
         n.children.map( (c) => {
             c.posY = nextY + c.maxH / 2 - c.rectH / 2
